@@ -11,9 +11,10 @@ export const Container = styled.div`
 export const Status = styled.ul`
     display: flex;
     justify-content: space-around;
-    padding: 10px;  
+    padding: 0;  
     background-color: #577457;
     border-radius: 10px;
+    height: 56px;
 `;
 export const Image = styled.img`
     height: 150px;
@@ -31,5 +32,13 @@ export const CardSpan = styled.span`
     display: block;
 `;
 export const CardLi = styled.li`
+  width: calc(100% / 3);
+  padding-top: 10px;
+  text-align: center;
   list-style: none;
+  box-sizing: border-box;
+  height: 100%;
+  &:not(:last-child){
+      border-right: 1px solid red;
+  }
 `;
