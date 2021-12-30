@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 import {TransactionTh, TransactionTd, TransactionTable, TransactionTbody, TransactionTr} from "./TransactionHistory.styled"
 
-export default function ({items}) {
+export default function TransactionHistory ({items}) {
     return (
         <TransactionTable>
         <thead>
@@ -22,4 +24,15 @@ export default function ({items}) {
         </TransactionTbody>
       </TransactionTable>
     )
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+      PropTypes.shape({
+          id: PropTypes.string.isRequired,
+          type: PropTypes.string.isRequired,
+          amount: PropTypes.string.isRequired,
+          currency: PropTypes.string.isRequired,
+      }),
+  ),
 };

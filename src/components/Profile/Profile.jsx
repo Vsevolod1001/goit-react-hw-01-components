@@ -33,10 +33,10 @@ export default function Profile ({user: {username, avatar, tag, location, stats}
     )
 }
 
-// Profile.PropTypes = {
-//   username: PropTypes.string,
-//   avatar: PropTypes.string,
-//   tag: PropTypes.string,
-//   location: PropTypes.string,
-//   stats: PropTypes.number,
-// };
+Profile.propTypes = {
+  username: PropTypes.string,
+  avatar: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  stats: PropTypes.number,
+};

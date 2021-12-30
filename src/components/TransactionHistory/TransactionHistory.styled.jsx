@@ -14,7 +14,7 @@ export const TransactionTd = styled.td`
   padding: 10px 40px;
 `;
 export const TransactionTr = styled.tr`
-     :nth-child(2n) {
+    :nth-of-type(2n) {
   background-color: orange;
     }
 `;
