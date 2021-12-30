@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Container, Status, Image, Card, CardName, CardSpan, CardLi} from "./Profile.styled"
 
 
@@ -31,3 +32,11 @@ export default function Profile ({user: {username, avatar, tag, location, stats}
         </Container>
     )
 }
+
+// Profile.PropTypes = {
+//   username: PropTypes.string,
+//   avatar: PropTypes.string,
+//   tag: PropTypes.string,
+//   location: PropTypes.string,
+//   stats: PropTypes.number,
+// };
