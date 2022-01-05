@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import { StatsTitle, StatLi, StatUl, StatsSpan, StatsSections } from "./Statistics.styled"
 
 export default function Statistics ({stats, title}) {
+  
     return (<StatsSections>
-    <StatsTitle>{title}</StatsTitle>
+    <StatsTitle>{title.length > 0 ? title : false}</StatsTitle>
   
     <StatUl>
-        {stats.map(stat => (
-           <StatLi key = {stat.id}>
-           <span>{stat.label}</span>
-           <StatsSpan>{stat.percentage}%</StatsSpan>
+        {stats.map(({id, label, percentage})=> (
+           <StatLi key = {id}>
+           <span>{label}</span>
+           <StatsSpan>{percentage}%</StatsSpan>
          </StatLi>
         ))}       
     </StatUl>
@@ -26,5 +27,6 @@ Statistics.propTypes = {
           percentage: PropTypes.number.isRequired,
       }),
   ),
+  title: PropTypes.string.isRequired,
 };
 

@@ -10,7 +10,12 @@ import TransactionHistory from "./TransactionHistory/TransactionHistory"
 export default function App () {
     return (
     <>
-        <Profile user={user}/>
+        <Profile name={user.username}
+                avatar={user.avatar}
+                tag={user.tag}
+                location={user.location}
+                stats={user.stats}
+        />
         <Statistics title="Upload stats" stats={data} />
         <FriendList friends={friends} />
         <TransactionHistory items={transactions} />
