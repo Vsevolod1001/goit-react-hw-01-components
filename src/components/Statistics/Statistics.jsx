@@ -5,7 +5,7 @@ import { StatsTitle, StatLi, StatUl, StatsSpan, StatsSections } from "./Statisti
 export default function Statistics ({stats, title}) {
   
     return (<StatsSections>
-    <StatsTitle>{title.length > 0 ? title : false}</StatsTitle>
+    {title && <StatsTitle>{title}</StatsTitle>}
   
     <StatUl>
         {stats.map(({id, label, percentage})=> (
